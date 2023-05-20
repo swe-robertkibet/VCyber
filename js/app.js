@@ -7,6 +7,15 @@ const footer_input = document.querySelector(".footer-input");
 const hamburger_menu = document.querySelector(".hamburger-menu");
 const navbar = document.querySelector("header nav");
 const links = document.querySelectorAll(".links a");
+const imgs = document.getElementById('imgs')
+const leftBtn = document.getElementById('left')
+const rightBtn = document.getElementById('right')
+const img = document.querySelectorAll('#imgs img')
+let idx = 0;
+
+let interval = setInterval(run, 2000)
+
+
 
 
 footer_input.addEventListener("focus", () => {
@@ -100,3 +109,38 @@ var mySwiper = new Swiper(".swiper-container", {
     nextEl: ".swiper-button-next",
   },
 });
+
+
+
+function run() {
+  idx++
+  changeImage()
+}
+
+function changeImage() {
+  if(idx > img.length - 1 ) {
+      idx = 0;
+  } else if(idx < 0) {
+      idx = img.length - 1
+  }
+
+  imgs.style.transform = `translateX(${-idx * 500}px)`
+}
+
+function resetInterval() {
+  clearInterval(interval)
+  interval = setInterval(run, 2000)
+}
+
+rightBtn.addEventListener('click', () => {
+  idx++
+  changeImage()
+  resetInterval()
+})
+
+
+leftBtn.addEventListener('click', () => {
+  idx--
+  changeImage()
+  resetInterval()
+})
