@@ -18,6 +18,8 @@ let interval = setInterval(run, 2000)
 
 
 
+
+
 footer_input.addEventListener("focus", () => {
   footer_input.classList.add("focus");
 });

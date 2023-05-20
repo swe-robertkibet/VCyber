@@ -285,6 +285,13 @@ img {
   font-weight: 500;
   transition: 0.3s;
 }
+
+
+.blogbutton-container {
+  text-align: center;
+  width: 200px; /* adjust width as needed */
+  height: 200px; /* adjust height as needed */
+}
 /* End Genral Styles */
 
 /* Header */
@@ -414,11 +421,14 @@ nav.open .links {
 }
 
 .header-title {
-  font-size: 3.8rem;
+  font-size: 2.8rem;
   line-height: 0.8;
   color: var(--dark-one);
 }
 
+.larger-letter {
+  font-size: larger;
+}
 .header-content .text {
   margin: 2.15rem 0;
 }
@@ -549,6 +559,7 @@ header .circle {
 
 .about {
   overflow: hidden;
+  background-color: #e7e7e7;
 }
 
 .about img {
@@ -764,7 +775,7 @@ header .circle {
 
 .blog-content {
   padding: 2.1rem 2.2rem 2.7rem 2.2rem;
-  height: 200px;
+  height: 220px;
 }
 
 .blog-info {
@@ -776,7 +787,7 @@ header .circle {
 .blog h3 {
   text-transform: uppercase;
   font-size: 1.0rem;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 
